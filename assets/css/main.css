@@ -72,13 +72,26 @@ input, select, textarea {
 	appearance: none;
 }
 .tabs {
-  display: flex;
+  display: flex; 
   gap: 1rem;
   margin-bottom: 1rem;
+  overflow: hidden;
+}
+.tab {
+	flex: 1 1 0;   
 }
 .tabcontent {
   display: none;
 }
+
+@media (max-width: 600px) {
+  .tabs {
+    padding: 0.4rem 0.5rem;
+    flex-direction:column;
+  	flex-wrap: wrap;  
+  }
+}
+
 .example-images {
   display: flex;
   flex-wrap: wrap;
