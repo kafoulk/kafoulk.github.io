@@ -115,20 +115,24 @@ input, select, textarea {
 	transform: scale(1.05);
   }
 
+figcaption {
+	font-size: 0.8rem;
+}
+
+
 .example-images-2 {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
 	justify-content: center;
-	align-items: flex-start;
-	margin: 2rem 0;
+	align-items:center;
+	margin-bottom: 2rem;
   }
   
   .example-images-2 figure {
 	flex: 0 0 calc(50% - 0.5rem); /* Always half width minus the gap */
 	max-width: calc(50% - 0.5rem);
 	margin: 0;
-	text-align: center;
   }
   
   .example-images-2 img {
@@ -144,10 +148,6 @@ input, select, textarea {
 	transform: scale(1.05);
   }
   
-  .example-images-2 figcaption {
-	margin-top: 0.5rem;
-	font-size: 0.9rem;
-  }
   
   /* Stack on mobile */
   @media (max-width: 768px) {
@@ -177,7 +177,7 @@ input, select, textarea {
   right: 0; 
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 0;
 }
 .case-study-hero h2 {
@@ -196,6 +196,13 @@ input, select, textarea {
 
 .case-study-2 {
 	background-image: url('../../images/cs2-example9.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.case-study-3 {
+	background-image: url('../../images/casestudy3.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
