@@ -76,7 +76,21 @@ input, select, textarea {
 	flex: 1 1 0;   
 }
 .tabcontent {
-  display: none;
+  display: block;     
+  opacity: 0;        
+  height: 0;           
+  overflow: hidden;     
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.tabcontent.show {
+  opacity: 1;
+  height: auto;        
+}
+
+.tablink.active {
+  background-color: #f0f0f038;
+  border-bottom: 2px solid #333;
 }
 
 @media (max-width: 600px) {
