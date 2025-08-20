@@ -1,0 +1,6 @@
+Team: Kiersten Foulk
+Site: https://kafoulk.github.io
+Contact: kiersten.l.foulk@gmail.com
+
+Thanks: family, mentors, collaborators, and clients!
+Standards: HTML5, CSS3, Accessibility-first, Performance-minded

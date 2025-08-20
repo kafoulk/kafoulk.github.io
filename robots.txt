@@ -1,0 +1,6 @@
+# robots.txt for Kiersten Foulk's Portfolio
+User-agent: *
+Allow: /
+
+# Point crawlers to your sitemap
+Sitemap: https://kafoulk.github.io/sitemap.xml

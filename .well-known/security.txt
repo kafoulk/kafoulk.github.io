@@ -1,0 +1,4 @@
+# security.txt — contact info for security disclosures
+Contact: mailto:kafoulk@iu.edu
+Policy: https://kafoulk.github.io/security-policy
+Expires: 2026-08-20T00:00:00Z
