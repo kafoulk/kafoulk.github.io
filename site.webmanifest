@@ -1,0 +1,21 @@
+{
+  "name": "Kiersten Foulk Portfolio",
+  "short_name": "KFoulk",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Portfolio of Kiersten Foulk, UX designer and digital problem solver. Explore case studies in web design, digital marketing, and creative strategy.",
+  "icons": [
+    {
+      "src": "images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}
