@@ -784,8 +784,6 @@ figcaption {
 
 		.image:before {
 			pointer-events: none;
-			background-image: url("../../images/overlay.png");
-			background-color: rgba(19, 21, 25, 0.5);
 			border-radius: 4px;
 			content: '';
 			display: block;
@@ -1374,7 +1372,6 @@ figcaption {
 		}
 
 /* Header */
-
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -1439,7 +1436,7 @@ figcaption {
 
 		#header .logo img {
 			height:100%;
-			 filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+			 filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.25));
 		}
 
 			#header .logo .icon:before {
