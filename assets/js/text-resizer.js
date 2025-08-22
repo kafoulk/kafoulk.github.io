@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const increaseBtn = document.getElementById("increase-text");
   const decreaseBtn = document.getElementById("decrease-text");
-  const toggleBtn = document.getElementById("toggle");
   let currentSize = 100; 
 
   increaseBtn.addEventListener("click", (e) => {
@@ -89,12 +88,4 @@ document.addEventListener("DOMContentLoaded", () => {
       resizer.style.transition = "";
     }, 200);
   });
-  toggleBtn.addEventListener("click", () => {
-  const isHidden = increaseBtn.style.display === "none";
-
-  increaseBtn.style.display = isHidden ? "block" : "none";
-  decreaseBtn.style.display = isHidden ? "block" : "none";
-
-  toggleBtn.classList.toggle("active", !isHidden);
-});
 });

@@ -64,7 +64,7 @@
   </head>
   <body class="is-preload">
         <div id="text-resizer" aria-label="Text size controls">
-          <div class="draggable toggle"></div>
+          <div class="draggable"></div>
           <button type="button" id="increase-text" aria-label="Text size controls" class="btnToggle">
             <i class="fa-solid fa-magnifying-glass-plus"></i>
           </button>
@@ -827,145 +827,125 @@
         </article>
 
         <!-- About -->
-        <article id="about">
-          <h2 class="major">About Me</h2>
-          <span class="image main"
-            ><img
-              src="images/aboutMe.png"
-              alt="Photo of Kiersten at graduation"
-          /></span>
-          <h3>Hi, I'm Kiersten Foulk</h3>
-          <p>
-            A UX designer with a lifelong love of asking questions like “why
-            isn’t this easier?” and “who thought this was a good idea?”
-          </p>
+        <article id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading" class="major">About Me</h2>
 
-          <h3>What UX Design Means to Me</h3>
+          <!-- Main Image -->
+          <figure class="image main">
+            <img src="images/aboutMe.png" alt="Photo of Kiersten at graduation" />
+          </figure>
+        <!-- Introduction -->
+        <section aria-labelledby="intro-heading">
+          <h3 id="intro-heading">Hi, I'm Kiersten Foulk</h3>
           <p>
-            To me, UX design is the practice of making someone’s day smoother
-            without them even noticing. It’s anticipating needs before someone
-            has to say them out loud. It’s that quiet little moment when a
-            person interacts with something and doesn’t get frustrated,
-            confused, or stuck. That ease, that satisfaction… is the mark of a
-            design that did its job.
+            A UX designer with a lifelong love of asking questions like “why isn’t this easier?” 
+            and “who thought this was a good idea?”
           </p>
+        </section>
 
+        <!-- UX Philosophy -->
+        <section aria-labelledby="ux-meaning-heading">
+          <h3 id="ux-meaning-heading">What UX Design Means to Me</h3>
           <p>
-            I believe UX thinking belongs in every part of the design process,
-            because at its core, all designs are created for someone. Whether
-            it’s a product, a website, a logo, or a system, if it’s not built
-            around the person on the other side, it’s just decoration. In a
-            world where technology is threaded through almost every part of
-            life, we don’t just have a responsibility to make things look good,
-            we have a responsibility to make them work for the people who rely
-            on them.
+            To me, UX design is the practice of making someone’s day smoother without them even noticing. 
+            It’s anticipating needs before someone has to say them out loud. It’s that quiet little moment 
+            when a person interacts with something and doesn’t get frustrated, confused, or stuck. That ease, 
+            that satisfaction… is the mark of a design that did its job.
           </p>
-
-          <h3>Rooted in Curiosity</h3>
           <p>
-            I grew up in Fort Wayne, Indiana, a small city filled with potential
-            where I learned how to balance curiosity with commitment. I've
-            always been the kind of person who wants to know how systems work,
-            how people think, and why something feels intuitive while something
-            else feels clunky. That curiosity drives me in design, but it also
-            extends into the rest of my life. I have a deep love for the arts,
-            from drawing and illustration to photography or music, and it
-            continues to fuel my creativity and shape how I approach visual
-            storytelling. Outside of the studio, I find energy in staying active
-            and engaged with the world around me, whether that means spending
-            time outdoors, traveling to new places, or taking on challenges that
-            push me outside of my comfort zone. For me, growth is just as much
-            about experiencing life as it is about learning in the classroom.
-            Every hike, concert, or cross-country adventure shapes the way I see
-            the world, and that perspective carries directly into my design
-            work, keeping it human-centered, dynamic, and grounded in lived
-            experience.
+            I believe UX thinking belongs in every part of the design process, because at its core, all designs 
+            are created for someone. Whether it’s a product, a website, a logo, or a system, if it’s not built 
+            around the person on the other side, it’s just decoration. In a world where technology is threaded 
+            through almost every part of life, we don’t just have a responsibility to make things look good, 
+            we have a responsibility to make them work for the people who rely on them.
           </p>
+        </section>
 
-          <h3>Learning Through Experience</h3>
+        <!-- Curiosity -->
+        <section aria-labelledby="curiosity-heading">
+          <h3 id="curiosity-heading">Rooted in Curiosity</h3>
           <p>
-            My academic journey has always been about pairing creativity with
-            real-world application. While pursuing my associates degree at Ivy
-            Tech, I honed my craft in illustration and graphic design,
-            sharpening the visual foundation that still guides my work today.
-            When I transferred to Indiana University, I shifted my focus toward
-            media and development, exploring the technical side of how digital
-            experiences are built, produced, and sustained. To complement my
-            formal education, I also pursued professional certifications,
-            earning a Multi-Device Development certification from Indiana
-            University, a Graphic Design specialization from California
-            Institute of the Arts, and both a UX Design certificate and a
-            Digital Marketing certificate from Google. That combination of
-            artistry and technology became the foundation of my college career,
-            reinforced by internships that challenged me to apply what I was
-            learning in new contexts. As a Graphic Design Intern for
-            BoweDigital, I gained firsthand experience managing multiple brand
-            schedules and identities. At the Community Foundation DeKalb County,
-            I learned how to align visual storytelling with organizational
-            mission using different types of media. Later, while attending
-            school in Los Angeles, I joined The Passionistas Project as a
-            Content Creation Intern, diving into a fast-paced media landscape
-            while continuing my coursework full-time. To support myself, I have
-            also worked at least part-time throughout my degree, and each role
-            has taught me more about how people interact with technology and
-            where design either supports or sabotages them. What I realized
-            through all of it is simple: good design isn’t just about how
-            something looks. It’s about how it helps reach a goal or solve a
-            problem. My semester in Los Angeles became a defining chapter,
-            immersing myself in the media industry while balancing school and
-            work full-time further instilled the adaptability, independence, and
-            collaborative spirit that fuels my approach to design and
-            production.
+            I grew up in Fort Wayne, Indiana, a small city filled with potential where I learned how to balance 
+            curiosity with commitment. I've always been the kind of person who wants to know how systems work, 
+            how people think, and why something feels intuitive while something else feels clunky. That curiosity 
+            drives me in design, but it also extends into the rest of my life. I have a deep love for the arts, 
+            from drawing and illustration to photography or music, and it continues to fuel my creativity and 
+            shape how I approach visual storytelling. Outside of the studio, I find energy in staying active and 
+            engaged with the world around me, whether that means spending time outdoors, traveling to new places, 
+            or taking on challenges that push me outside of my comfort zone. For me, growth is just as much about 
+            experiencing life as it is about learning in the classroom. Every hike, concert, or cross-country 
+            adventure shapes the way I see the world, and that perspective carries directly into my design work, 
+            keeping it human-centered, dynamic, and grounded in lived experience.
           </p>
+        </section>
 
-          <h3>The Swiss Army Knife Effect</h3>
+        <!-- Experience -->
+        <section aria-labelledby="learning-heading">
+          <h3 id="learning-heading">Learning Through Experience</h3>
           <p>
-            My background makes me a bit of a Swiss army knife, shaped not only
-            by my formal education but also by the unconventional path I took to
-            get there. I graduated early from Carroll High School in Indiana,
-            eager to step outside the classroom and begin experiencing life. In
-            those early years, I worked in restaurants and retail, quickly
-            moving into managerial roles where I learned leadership,
-            adaptability, and how to thrive in high-pressure environments. When
-            the pandemic began, I shifted from an assistant manager position at
-            a storage facility to working in IT and customer support for
-            Verizon, which sparked my interest in technology and problem-solving
-            from the perspective of users. During this time, I began pursuing
-            certifications that ultimately inspired me to commit to a degree in
-            media and design. That mix of early leadership experience, technical
-            problem-solving, and creative ambition now informs my work as a
-            designer. I have since led multi-platform digital campaigns,
-            designed websites from concept to launch, conducted user testing and
-            research, optimized SEO and performance, produced and edited
-            short-form video and photography content, and built streamlined
-            systems for brands in need of clarity and cohesion. I have worked
-            across industries, across teams, and across disciplines, and the
-            common thread is always the user.
+            My academic journey has always been about pairing creativity with real-world application. While pursuing 
+            my associates degree at Ivy Tech, I honed my craft in illustration and graphic design, sharpening the 
+            visual foundation that still guides my work today. When I transferred to Indiana University, I shifted 
+            my focus toward media and development, exploring the technical side of how digital experiences are built, 
+            produced, and sustained. To complement my formal education, I also pursued professional certifications, 
+            earning a Multi-Device Development certification from Indiana University, a Graphic Design specialization 
+            from California Institute of the Arts, and both a UX Design certificate and a Digital Marketing certificate 
+            from Google. That combination of artistry and technology became the foundation of my college career, 
+            reinforced by internships that challenged me to apply what I was learning in new contexts. As a Graphic 
+            Design Intern for BoweDigital, I gained firsthand experience managing multiple brand schedules and identities. 
+            At the Community Foundation DeKalb County, I learned how to align visual storytelling with organizational mission 
+            using different types of media. Later, while attending school in Los Angeles, I joined The Passionistas Project 
+            as a Content Creation Intern, diving into a fast-paced media landscape while continuing my coursework full-time. 
+            To support myself, I have also worked at least part-time throughout my degree, and each role has taught me more 
+            about how people interact with technology and where design either supports or sabotages them. What I realized 
+            through all of it is simple: good design isn’t just about how something looks. It’s about how it helps reach a 
+            goal or solve a problem. My semester in Los Angeles became a defining chapter, immersing myself in the media 
+            industry while balancing school and work full-time further instilled the adaptability, independence, and 
+            collaborative spirit that fuels my approach to design and production.
           </p>
+        </section>
 
-          <h3>Giving Back Matters</h3>
+        <!-- Swiss Army Knife -->
+        <section aria-labelledby="swiss-heading">
+          <h3 id="swiss-heading">The Swiss Army Knife Effect</h3>
           <p>
-            I also care deeply about community. I currently volunteer as a
-            crisis counselor with Crisis Text Line and help facilitate
-            interactive learning at the Indiana State Museum. I enjoy spending a
-            few weekends during the summer helping local fairs and festivals
-            wherever needed, and have taught basic economics to kindergartners
-            through Junior Achievement. Volunteering grounds me. It reminds me
-            that beyond the pixels and platforms, there are real people on the
-            other side of every design decision with diverse experiences and
-            abilities.
+            My background makes me a bit of a Swiss army knife, shaped not only by my formal education but also by the 
+            unconventional path I took to get there. I graduated early from Carroll High School in Indiana, eager to step 
+            outside the classroom and begin experiencing life. In those early years, I worked in restaurants and retail, 
+            quickly moving into managerial roles where I learned leadership, adaptability, and how to thrive in high-pressure 
+            environments. When the pandemic began, I shifted from an assistant manager position at a storage facility to 
+            working in IT and customer support for Verizon, which sparked my interest in technology and problem-solving 
+            from the perspective of users. During this time, I began pursuing certifications that ultimately inspired me to 
+            commit to a degree in media and design. That mix of early leadership experience, technical problem-solving, and 
+            creative ambition now informs my work as a designer. I have since led multi-platform digital campaigns, designed 
+            websites from concept to launch, conducted user testing and research, optimized SEO and performance, produced 
+            and edited short-form video and photography content, and built streamlined systems for brands in need of clarity 
+            and cohesion. I have worked across industries, across teams, and across disciplines, and the common thread is always the user.
           </p>
+        </section>
 
-          <h3>Let’s Connect</h3>
+        <!-- Community -->
+        <section aria-labelledby="givingback-heading">
+          <h3 id="givingback-heading">Giving Back Matters</h3>
           <p>
-            If you’re looking for a UX designer who brings technical skills,
-            creative insight, and a user-first mindset to every project, I’d
-            love to connect. In a world saturated with digital noise, I believe
-            in creating experiences that bring clarity, ease, and even moments
-            of joy to those who use them. Let’s make something that works
+            I also care deeply about community. I currently volunteer as a crisis counselor with Crisis Text Line and help 
+            facilitate interactive learning at the Indiana State Museum. I enjoy spending a few weekends during the summer 
+            helping local fairs and festivals wherever needed, and have taught basic economics to kindergartners through 
+            Junior Achievement. Volunteering grounds me. It reminds me that beyond the pixels and platforms, there are real 
+            people on the other side of every design decision with diverse experiences and abilities.
+          </p>
+        </section>
+
+        <!-- Call to Action -->
+        <section aria-labelledby="connect-heading">
+          <h3 id="connect-heading">Let’s Connect</h3>
+          <p>
+            If you’re looking for a UX designer who brings technical skills, creative insight, and a user-first mindset to 
+            every project, I’d love to connect. In a world saturated with digital noise, I believe in creating experiences 
+            that bring clarity, ease, and even moments of joy to those who use them. Let’s make something that works 
             beautifully and meaningfully for the people it serves.
           </p>
-          <a href="#contact" style="border-bottom: none"
+          <a href="#contact" style="border-bottom: none" aria-label="Navigation to contact and top"
             ><button>Contact Me Today</button></a
           ><a href="#work" style="margin-left: 20px">Back to the top</a>
         </article>
@@ -973,37 +953,75 @@
         <!-- Contact -->
         <article id="contact">
           <h2 class="major">Contact</h2>
-          <form method="post" action="https://formspree.io/f/myzpvyre">
+
+          <!-- Accessible Form -->
+          <form method="post" action="https://formspree.io/f/myzpvyre" aria-label="Contact form" novalidate>
             <div class="fields">
+
+              <!-- Name Field -->
               <div class="field half">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your full name"
+                  required
+                  aria-required="true"
+                />
               </div>
+
+              <!-- Email Field -->
               <div class="field half">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="you@email.com"
+                  required
+                  aria-required="true"
+                />
               </div>
+
+              <!-- Message Field -->
               <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4"></textarea>
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  placeholder="Your message here..."
+                  required
+                  aria-required="true"
+                ></textarea>
               </div>
+
             </div>
+
+            <!-- Form Actions -->
             <ul class="actions">
               <li>
-                <input type="submit" value="Send Message" class="primary" />
+                <button type="submit" class="primary">Send Message</button>
               </li>
-              <li><input type="reset" value="Reset" /></li>
+              <li>
+                <button type="reset">Reset</button>
+              </li>
             </ul>
           </form>
-          <ul class="icons">
+
+          <!-- Social Icons -->
+          <ul class="icons" role="list">
             <li>
               <a
                 href="https://www.linkedin.com/in/kiersten-foulk/"
                 class="icon brands fa-linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><span class="label">LinkedIn</span></a
+                aria-label="LinkedIn profile"
               >
+                <span class="label">LinkedIn</span>
+              </a>
             </li>
             <li>
               <a
@@ -1011,8 +1029,10 @@
                 class="icon brands fa-behance"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><span class="label">Behance</span></a
+                aria-label="Behance portfolio"
               >
+                <span class="label">Behance</span>
+              </a>
             </li>
             <li>
               <a
@@ -1020,8 +1040,10 @@
                 class="icon brands fa-github"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><span class="label">GitHub</span></a
+                aria-label="GitHub profile"
               >
+                <span class="label">GitHub</span>
+              </a>
             </li>
           </ul>
         </article>
