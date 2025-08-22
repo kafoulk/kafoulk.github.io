@@ -212,10 +212,49 @@ figcaption {
   #text-resizer {
     flex-direction: column;
     top: auto;
-    right: auto;
-    left: 10px;
-    margin-top: 10px;
+	left: auto;
+    margin: 10px;
   }
+
+  /* Triangle at the bottom-right corner */
+#text-resizer::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 15px solid rgba(255, 255, 255, 0.5);
+  bottom: 0;
+  right: 0px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  
+}
+
+#text-resizer[data-triangle-corner="top-left"]::after {
+  top: 0;
+  left: 0;
+  transform: rotate(270deg);
+}
+
+#text-resizer[data-triangle-corner="top-right"]::after {
+  top: 0;
+  right: 0;
+  transform: rotate(0deg);
+}
+
+#text-resizer[data-triangle-corner="bottom-left"]::after {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+#text-resizer[data-triangle-corner="bottom-right"]::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
 
   #text-resizer button {
     font-size: 18px !important;
@@ -229,11 +268,6 @@ figcaption {
                 0 4px 6px rgba(0,0,0,0.08);
   }
 
-  #toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 3px;
-  }
 }
 
 /* -------------------- DRAGGABLE CLASS -------------------- */

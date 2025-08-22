@@ -25,6 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const resizer = document.getElementById("text-resizer");
   let offsetX = 0, offsetY = 0, isDragging = false;
 
+  function updateTrianglePosition() {
+    const rect = resizer.getBoundingClientRect();
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    const corners = [
+      { name: 'top-left', x: rect.left, y: rect.top },
+      { name: 'top-right', x: rect.right, y: rect.top },
+      { name: 'bottom-left', x: rect.left, y: rect.bottom },
+      { name: 'bottom-right', x: rect.right, y: rect.bottom }
+    ];
+
+    // Find corner closest to center
+    let closest = corners[0];
+    let minDist = Math.hypot(centerX - closest.x, centerY - closest.y);
+
+    for (let i = 1; i < corners.length; i++) {
+      const d = Math.hypot(centerX - corners[i].x, centerY - corners[i].y);
+      if (d < minDist) {
+        minDist = d;
+        closest = corners[i];
+      }
+    }
+
+    // Position triangle in the closest corner
+    resizer.dataset.triangleCorner = closest.name; // store for CSS
+  }
+
   resizer.addEventListener("touchstart", (e) => {
     isDragging = true;
     const touch = e.touches[0];
@@ -35,10 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resizer.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
-    e.preventDefault(); // prevent scrolling
+    e.preventDefault();
     const touch = e.touches[0];
     resizer.style.left = (touch.clientX - offsetX) + "px";
     resizer.style.top = (touch.clientY - offsetY) + "px";
+
+    updateTrianglePosition();
   });
 
   resizer.addEventListener("touchend", () => {
@@ -50,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const screenH = window.innerHeight;
     const margin = 20;
 
-    // Distances to each corner
     const distTL = Math.hypot(rect.left, rect.top);
     const distTR = Math.hypot(screenW - rect.right, rect.top);
     const distBL = Math.hypot(rect.left, screenH - rect.bottom);
@@ -61,31 +90,29 @@ document.addEventListener("DOMContentLoaded", () => {
     let targetLeft, targetTop;
 
     if (minDist === distTL) {
-      // top-left
       targetLeft = margin;
       targetTop = margin;
     } else if (minDist === distTR) {
-      // top-right
       targetLeft = screenW - rect.width - margin;
       targetTop = margin;
     } else if (minDist === distBL) {
-      // bottom-left
       targetLeft = margin;
       targetTop = screenH - rect.height - margin;
     } else {
-      // bottom-right
       targetLeft = screenW - rect.width - margin;
       targetTop = screenH - rect.height - margin;
     }
 
-    // Smooth snap
     resizer.style.transition = "all 0.2s ease-out";
     resizer.style.left = targetLeft + "px";
     resizer.style.top = targetTop + "px";
 
-    // Remove transition after snapping
     setTimeout(() => {
       resizer.style.transition = "";
+      updateTrianglePosition(); // update triangle after snap
     }, 200);
   });
+
+  // Initial triangle positioning
+  updateTrianglePosition();
 });
