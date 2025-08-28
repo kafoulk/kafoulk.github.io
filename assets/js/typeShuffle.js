@@ -198,7 +198,7 @@ export class TypeShuffle {
         // set delays for each cell animation
         for (const line of this.lines) {
             for (const cell of line.cells) {
-                setTimeout(() => loop(line, cell), (line.position+1)*200);
+                setTimeout(() => loop(line, cell), (line.position+1)*400);
             }
         }
     }
