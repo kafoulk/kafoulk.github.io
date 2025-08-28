@@ -4,6 +4,25 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+import { preloadFonts } from './util.js';
+import { TypeShuffle } from './typeShuffle.js';
+
+preloadFonts('biu0hfr').then(() => {
+    document.body.classList.remove('loading');
+
+    const textElement = document.querySelector('.content');
+    
+    const ts = new TypeShuffle(textElement);
+    ts.trigger('fx1');
+
+    [...document.querySelectorAll('.effects > button')].forEach(button => {
+        button.addEventListener('click', () => {
+            ts.trigger(`fx${button.dataset.fx}`);
+        });
+    });
+
+});
+
 (function($) {
 
 	var	$window = $(window),
