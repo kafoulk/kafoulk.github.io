@@ -40,13 +40,13 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Kiersten Foulk | Portfolio",
+    fullName: "Kiersten Foulk",
+    email: "kiersten.l.foulk@gmail.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Kiersten Foulk",
+    p: ["I develop 3D visuals, simulations,", "user-interfaces, and web applications"],
   },
   contact: {
     p: "Get in touch",
@@ -67,11 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I'm a versatile web and simulation developer, UX/UI designer, and marketing strategist with deep technical experience in JavaScript, PHP, and game engines like Unity. I specialize in building immersive digital experiences, ranging from high-performing web applications to interactive 3D simulations, while designing intuitive, user-friendly interfaces in Figma. By combining clean architecture with data-driven SEO and paid advertising strategies, I create scalable, real-world solutions that not only captivate users but also drive measurable brand growth. Let's work together to bring your vision to life!`,
     },
     experience: {
       p: "What I have done so far",

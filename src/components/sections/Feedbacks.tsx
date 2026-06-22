@@ -6,6 +6,7 @@ import { testimonials } from "../../constants";
 import { Header } from "../atoms/Header";
 import { TTestimonial } from "../../types";
 import { config } from "../../constants/config";
+import { SectionWrapper } from "../../hoc";
 
 const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   index,
@@ -46,21 +47,20 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
 
 const Feedbacks = () => {
   return (
-    <div className="bg-black-100 mt-12 rounded-[20px]">
-      <div
-        className={`${styles.padding} bg-tertiary min-h-[300px] rounded-2xl`}
-      >
-        <Header useMotion={true} {...config.sections.feedbacks} />
-      </div>
-      <div
-        className={`${styles.paddingX} -mt-20 flex flex-wrap gap-7 pb-14 max-sm:justify-center`}
-      >
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
+    <div className="mt-12 rounded-[20px] relative">
+      <div className="absolute inset-0 bg-black-100 rounded-[20px] -mx-[5vw] sm:-mx-[10vw] xl:-mx-[20vw] z-0 pointer-events-none" />
+      <div className="relative z-10">
+        <div className={`${styles.padding} bg-tertiary min-h-[300px] rounded-2xl`}>
+          <Header useMotion={true} {...config.sections.feedbacks} />
+        </div>
+        <div className={`${styles.paddingX} -mt-20 flex flex-wrap gap-7 pb-14 max-sm:justify-center`}>
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Feedbacks;
+export default SectionWrapper(Feedbacks, "feedbacks");

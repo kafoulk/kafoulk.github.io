@@ -95,7 +95,7 @@ const Contact = () => {
                   value={form[`${input}`]}
                   onChange={handleChange}
                   placeholder={placeholder}
-                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                  className="bg-primary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
                   {...(input === "message" && { rows: 7 })}
                 />
               </label>
@@ -103,7 +103,7 @@ const Contact = () => {
           })}
           <button
             type="submit"
-            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
+            className="bg-primary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
           >
             {loading ? "Sending..." : "Send"}
           </button>

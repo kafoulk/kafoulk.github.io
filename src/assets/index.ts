@@ -8,26 +8,25 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
+import unity from "./tech/unity.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
+import unreal from "./tech/unreal.png";
+import electron from "./tech/electronjs.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import passionistasProject from "./company/passionistasProject.png";
+import APLogo from "./company/A&PLogo.png";
+import connerPrairie from "./company/connerPrairie.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
+import jagsparkScreen from "./JagsparkScreen.png";
+import apex from "./apex.png";
 import tripguide from "./tripguide.png";
 
 export {
@@ -40,23 +39,22 @@ export {
   menu,
   close,
   css,
-  docker,
   figma,
   git,
   html,
   javascript,
-  mongodb,
   nodejs,
   reactjs,
-  redux,
+  unity,
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
+  passionistasProject,
+  APLogo,
+  connerPrairie,
+  unreal,
+  electron,
+  jagsparkScreen,
+  apex,
   tripguide,
 };

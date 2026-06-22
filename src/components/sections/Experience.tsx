@@ -16,7 +16,7 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "#292430",
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
@@ -62,7 +62,7 @@ const Experience = () => {
       <Header useMotion={true} {...config.sections.experience} />
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor="linear-gradient(180deg, #D1C0A5 0%, #DCAFB3 100%, #D1C0A5 100%)">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
           ))}
