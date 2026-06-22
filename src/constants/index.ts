@@ -180,26 +180,26 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Kiersten updated our website and implemented a new SEO and paid ads strategy that increased our overall website traffic and brought the firm more qualified leads.",
+    name: "William Audet",
+    designation: "Founder",
+    company: "Audet & Partners, LLP",
+    image: "src/assets/william-audet-sq.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "Placeholder Text",
+    name: "Dr. Ronda Hamm",
+    designation: "Director of Food, Farm & Energy Experience",
+    company: "Conner Prairie Living History Museum",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+    name: "Zeb Wood",
     designation: "CTO",
-    company: "456 Enterprises",
+    company: "OpenMind XR",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
