@@ -49,8 +49,8 @@ export const config: TConfig = {
     p: ["I develop 3D visuals, simulations,", "user-interfaces, and web applications"],
   },
   contact: {
-    p: "Get in touch",
-    h2: "Contact.",
+    p: "Let's get in touch",
+    h2: "Contact",
     form: {
       name: {
         span: "Your Name",
@@ -66,20 +66,20 @@ export const config: TConfig = {
   sections: {
     about: {
       p: "Introduction",
-      h2: "Overview.",
+      h2: "Overview",
       content: `I'm a versatile web and simulation developer, UX/UI designer, and marketing strategist with deep technical experience in JavaScript, PHP, and game engines like Unity. I specialize in building immersive digital experiences, ranging from high-performing web applications to interactive 3D simulations, while designing intuitive, user-friendly interfaces in Figma. By combining clean architecture with data-driven SEO and paid advertising strategies, I create scalable, real-world solutions that not only captivate users but also drive measurable brand growth. Let's work together to bring your vision to life!`,
     },
     experience: {
       p: "What I have done so far",
-      h2: "Work Experience.",
+      h2: "Work Experience",
     },
     feedbacks: {
       p: "What others say",
-      h2: "Testimonials.",
+      h2: "Testimonials",
     },
     works: {
       p: "My work",
-      h2: "Projects.",
+      h2: "Projects",
       content: `Following projects showcases my skills and experience through
     real-world examples of my work. Each project is briefly described with
     links to code repositories and live demos in it. It reflects my

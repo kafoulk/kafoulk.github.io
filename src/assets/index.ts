@@ -24,10 +24,11 @@ import electron from "./tech/electronjs.png";
 import passionistasProject from "./company/passionistasProject.png";
 import APLogo from "./company/A&PLogo.png";
 import connerPrairie from "./company/connerPrairie.png";
+import cometLab from "./company/cropped-comet_logo_300.png";
 
 import jagsparkScreen from "./JagsparkScreen.png";
 import apex from "./apex.png";
-import tripguide from "./tripguide.png";
+import zenithVR from "./ZenithVR_Screenshot.png";
 
 export {
   logo,
@@ -52,9 +53,10 @@ export {
   passionistasProject,
   APLogo,
   connerPrairie,
+  cometLab,
   unreal,
   electron,
   jagsparkScreen,
   apex,
-  tripguide,
+  zenithVR,
 };

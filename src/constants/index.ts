@@ -31,6 +31,8 @@ import {
   unreal,
   electron,
   jagsparkScreen,
+  zenithVR,
+  cometLab,
 } from "../assets";
 import { PolyhedronGeometry } from "three";
 
@@ -175,6 +177,18 @@ const experiences: TExperience[] = [
       "Utilizing Unity, Figma, and version control tools to establish core driving physics, 3D modeling pipelines, and responsive UI/UX tailored for a high-traffic public environment.",
     ],
   },
+    {
+    title: "Project Manager",
+    companyName: "Convergent Media and Exploratory Technologies (COMET) Lab",
+    icon: cometLab,
+    iconBg: "#E6DEDD",
+    date: "August 2026 - Present",
+    points: [
+      "Serving as Project Manager to lead cross-functional student and graduate teams in developing convergent media applications, responsive UI/UX designs, and interactive technology prototypes within the COMET Lab.",
+      "Collaborating with university researchers and industry clients to scope project requirements, manage production timelines, and deploy emerging technology solutions tailored to specific stakeholder needs.",
+      "Utilizing industry-standard asset pipelines, Figma, and version control tools to establish core project architectures, organize design systems, and streamline team-wide deployment strategies.",
+    ],
+  },
 ];
 
 const testimonials: TTestimonial[] = [
@@ -192,15 +206,15 @@ const testimonials: TTestimonial[] = [
     name: "Dr. Ronda Hamm",
     designation: "Director of Food, Farm & Energy Experience",
     company: "Conner Prairie Living History Museum",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://unavatar.io/github/username",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "Hire Kiersten... NOW. Perfect balance of curiosity, enthusiasm, and get shit done. I have seen her manage product development with a small team, design and develop full stack, and jump in the deep end of stacks shes never experienced with enthusiasm and grace. Would hire again. ",
     name: "Zeb Wood",
     designation: "CTO",
     company: "OpenMind XR",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://unavatar.io/github/username",
   },
 ];
 
@@ -250,22 +264,22 @@ const projects: TProject[] = [
   {
     name: "Zenith VR",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A prototype virtual reality collaboration platform featuring an intelligent AI moderator, developed and evaluated to enhance remote meeting presence, promote inclusive participation, and reduce cognitive fatigue compared to traditional video conferencing tools.",
     tags: [
       {
-        name: "nextjs",
+        name: "unity",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "metaQuest",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "uxResearch",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: zenithVR,
     sourceCodeLink: "https://github.com/",
   },
 ];
