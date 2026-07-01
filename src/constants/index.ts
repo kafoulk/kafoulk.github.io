@@ -22,7 +22,6 @@ import {
   git,
   figma,
   apex,
-  tripguide,
   threejs,
   passionistasProject,
   APLogo,
@@ -214,7 +213,7 @@ const testimonials: TTestimonial[] = [
     name: "Zeb Wood",
     designation: "CTO",
     company: "OpenMind XR",
-    image: "https://unavatar.io/github/username",
+    image: "src/assets/zebWood.png",
   },
 ];
 
@@ -225,15 +224,15 @@ const projects: TProject[] = [
       "An HCI-researched, cross-platform mobile application developed using React and deployed as an Android APK, designed to reduce social friction and foster low-pressure peer connections for university students.",
     tags: [
       {
-        name: "React",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "Android APK",
+        name: "androidAPK",
         color: "green-text-gradient",
       },
       {
-        name: "Tailwind",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
