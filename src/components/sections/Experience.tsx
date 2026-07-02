@@ -13,6 +13,16 @@ import { TExperience } from "../../types";
 import { config } from "../../constants/config";
 
 const ExperienceCard: React.FC<TExperience> = (experience) => {
+  const iconContent = (
+    <div className="flex h-full w-full items-center justify-center">
+      <img
+        src={experience.icon}
+        alt={experience.companyName}
+        className="h-[60%] w-[60%] object-contain"
+      />
+    </div>
+  );
+
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -23,13 +33,19 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex h-full w-full items-center justify-center">
-          <img
-            src={experience.icon}
-            alt={experience.companyName}
-            className="h-[60%] w-[60%] object-contain"
-          />
-        </div>
+        experience.link ? (
+          <a
+            href={experience.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-full w-full items-center justify-center"
+            aria-label={`Visit ${experience.companyName}`}
+          >
+            {iconContent}
+          </a>
+        ) : (
+          iconContent
+        )
       }
     >
       <div>

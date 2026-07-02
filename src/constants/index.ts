@@ -130,6 +130,7 @@ const experiences: TExperience[] = [
     companyName: "The Passionistas Project",
     icon: passionistasProject,
     iconBg: "#E6DEDD",
+    link: "https://www.thepassionistasproject.com/",
     date: "January 2024 - April 2024",
     points: [
       "Developing and producing engaging short-form video content across platforms like Instagram Reels and TikTok to elevate brand visibility.",
@@ -142,6 +143,7 @@ const experiences: TExperience[] = [
     companyName: "Audet & Partners, LLP",
     icon: APLogo,
     iconBg: "#FFFFFF",
+    link: "https://www.audetlaw.com/",
     date: "January 2024 - February 2025",
     points: [
       "Redesigning and maintaining the firm's core web applications using HTML5, CSS3, JavaScript (ES6), and PHP 8 for robust backend database configuration.",
@@ -155,6 +157,7 @@ const experiences: TExperience[] = [
     companyName: "Audet & Partners, LLP",
     icon: APLogo,
     iconBg: "#FFFFFF",
+    link: "https://www.audetlaw.com/",
     date: "February 2025 - Present",
     points: [
       "Promoted to dual Website and Digital Marketing Manager role by the founder to oversee the firm’s comprehensive digital presence and paid advertising campaigns.",
@@ -168,6 +171,7 @@ const experiences: TExperience[] = [
     companyName: "Conner Prairie Living History Museum",
     icon: connerPrairie,
     iconBg: "#E6DEDD",
+    link: "https://www.connerprairie.org/",
     date: "September 2025 - Present",
     points: [
       "Serving as Project Manager and Simulation Developer to build a functional tractor simulator prototype for Conner Prairie's upcoming Food, Farm, and Energy Experience.",
@@ -181,6 +185,7 @@ const experiences: TExperience[] = [
     companyName: "Convergent Media and Exploratory Technologies (COMET) Lab",
     icon: cometLab,
     iconBg: "#E6DEDD",
+    link: "https://comet.luddy.indianapolis.iu.edu/",
     date: "August 2026 - Present",
     points: [
       "Serving as Project Manager to lead cross-functional student and graduate teams in developing convergent media applications, responsive UI/UX designs, and interactive technology prototypes within the COMET Lab.",
@@ -224,7 +229,7 @@ const projects: TProject[] = [
       "An HCI-researched, cross-platform mobile application developed using React and deployed as an Android APK, designed to reduce social friction and foster low-pressure peer connections for university students.",
     tags: [
       {
-        name: "react",
+        name: "typescript",
         color: "blue-text-gradient",
       },
       {
@@ -237,7 +242,7 @@ const projects: TProject[] = [
       },
     ],
     image: jagsparkScreen,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/kafoulk/JagSpark_IUI_BuddySystem",
   },
   {
     name: "APEX Cummins Service LLM",
