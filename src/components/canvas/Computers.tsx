@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
@@ -10,18 +10,18 @@ const LogoCube = () => {
   const cubeRef = useRef<THREE.Group>(null);
   const [scale, setScale] = useState(4);
 
-  // Dynamic 3D model matrix scaling based on actual device widths
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 480) {
-        setScale(2.5); // Tiny scale for mobile phones
+        setScale(2.5);
       } else if (width < 768) {
-        setScale(3.0); // Scale for portrait tablets/iPads
+        setScale(3.0);
       } else if (width < 1024) {
-        setScale(3.5); // Scale for landscape tablets / small laptops
+        setScale(3.5);
       } else {
-        setScale(4); // Standard desktop size
+        setScale(4);
       }
     };
 

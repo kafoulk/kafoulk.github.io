@@ -33,7 +33,6 @@ import {
   zenithVR,
   cometLab,
 } from "../assets";
-import { PolyhedronGeometry } from "three";
 
 export const navLinks: TNavLink[] = [
   {
@@ -204,14 +203,14 @@ const testimonials: TTestimonial[] = [
     company: "Audet & Partners, LLP",
     image: "src/assets/william-audet-sq.jpg",
   },
-  {
+  /*{
     testimonial:
       "Placeholder Text",
     name: "Dr. Ronda Hamm",
     designation: "Director of Food, Farm & Energy Experience",
     company: "Conner Prairie Living History Museum",
     image: "https://unavatar.io/github/username",
-  },
+  }, */
   {
     testimonial:
       "Hire Kiersten... NOW. Perfect balance of curiosity, enthusiasm, and get shit done. I have seen her manage product development with a small team, design and develop full stack, and jump in the deep end of stacks shes never experienced with enthusiasm and grace. Would hire again. ",
