@@ -6,10 +6,9 @@ import * as THREE from "three";
 import CanvasLoader from "../layout/Loader";
 
 const LogoCube = () => {
-  const logo = useGLTF("./logoModel/3DLogoSpinAnimationMetallic.glb");
+  const logo = useGLTF("/logoModel/3DLogoSpinAnimationMetallic.glb");
   const cubeRef = useRef<THREE.Group>(null);
   const [scale, setScale] = useState(4);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -86,10 +85,8 @@ const LogoCanvas = () => {
               background: "transparent" 
             }}
           >
-            <source src="LogoVid.webm" type="video/webm" />
-            <source src="LogoVid.mp4" type="video/mp4" />
-            <source src="/LogoVid.webm" type="video/webm" />
             <source src="/LogoVid.mp4" type="video/mp4" />
+            <source src="/LogoVid.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -116,5 +113,7 @@ const LogoCanvas = () => {
     </div>
   );
 };
+
+useGLTF.preload("/logoModel/3DLogoSpinAnimationMetallic.glb");
 
 export default LogoCanvas;
