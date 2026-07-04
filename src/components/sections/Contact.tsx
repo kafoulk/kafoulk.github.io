@@ -47,9 +47,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
           to_email: config.html.email,
           message: form.message,
         },
-        {
-          publicKey: emailjsConfig.publicKey,
-        }
+        emailjsConfig.publicKey
       )
       .then(
         () => {
