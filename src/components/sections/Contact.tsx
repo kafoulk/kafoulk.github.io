@@ -13,9 +13,9 @@ const INITIAL_STATE = Object.fromEntries(
 );
 
 const emailjsConfig = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_c0j2y4h",
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_ai2atcc",
+  publicKey: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN || "VT_wCJDG3syACK69Z", 
 };
 
 const Contact = () => {
@@ -31,7 +31,7 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
+const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
     if (e === undefined) return;
     e.preventDefault();
     setLoading(true);
@@ -47,19 +47,19 @@ const Contact = () => {
           to_email: config.html.email,
           message: form.message,
         },
-        emailjsConfig.accessToken
+        {
+          publicKey: emailjsConfig.publicKey,
+        }
       )
       .then(
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm(INITIAL_STATE);
         },
         (error) => {
           setLoading(false);
-
-          console.log(error);
+          console.error("EmailJS Error details:", error);
           alert("Something went wrong.");
         }
       );
