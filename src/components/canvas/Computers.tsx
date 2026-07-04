@@ -96,7 +96,8 @@ const LogoCanvas = () => {
           shadows
           dpr={[1, 2]}
           camera={{ position: [0, 0, 6.5], fov: 45 }}
-          gl={{ preserveDrawingBuffer: true, alpha: true }}
+          gl={{ preserveDrawingBuffer: true, alpha: true, powerPreference: "low-power",
+        antialias: false }}
         >
           <Suspense fallback={<CanvasLoader />}>
             <OrbitControls
