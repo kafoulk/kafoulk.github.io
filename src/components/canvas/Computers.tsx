@@ -1,84 +1,120 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 import CanvasLoader from "../layout/Loader";
 
-const Computers: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const LogoCube = () => {
+  const logo = useGLTF("./logoModel/3DLogoSpinAnimationMetallic.glb");
+  const cubeRef = useRef<THREE.Group>(null);
+  const [scale, setScale] = useState(4);
+
+  // Dynamic 3D model matrix scaling based on actual device widths
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 480) {
+        setScale(2.5); // Tiny scale for mobile phones
+      } else if (width < 768) {
+        setScale(3.0); // Scale for portrait tablets/iPads
+      } else if (width < 1024) {
+        setScale(3.5); // Scale for landscape tablets / small laptops
+      } else {
+        setScale(4); // Standard desktop size
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useFrame(() => {
+    if (cubeRef.current) {
+      cubeRef.current.rotation.y += 0.004; 
+      cubeRef.current.rotation.x += 0.002;
+    }
+  });
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1} />
+      <ambientLight intensity={0.7} />
+      <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
+      <pointLight position={[-5, -5, -5]} intensity={0.5} />
+      
       <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -4.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        ref={cubeRef}
+        object={logo.scene}
+        scale={scale}
+        position={[0, 0, 0]} 
       />
     </mesh>
   );
 };
 
-const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+const LogoCanvas = () => {
+  const [supportsWebGL, setSupportsWebGL] = useState(true);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    try {
+      const canvas = document.createElement("canvas");
+      const supports = !!(
+        window.WebGLRenderingContext &&
+        (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
+      );
+      setSupportsWebGL(supports);
+    } catch (e) {
+      setSupportsWebGL(false);
+    }
   }, []);
 
   return (
-    <>
-      {isMobile ? (
-        <></>
+    <div style={{ width: "100%", height: "100%", minHeight: "350px", position: "relative" }}>
+      {!supportsWebGL ? (
+        <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <video 
+            key="mobile-logo-video"
+            autoPlay 
+            loop 
+            muted
+            playsInline
+            style={{ 
+              width: "100%", 
+              height: "100%", 
+              objectFit: "contain", 
+              background: "transparent" 
+            }}
+          >
+            <source src="LogoVid.webm" type="video/webm" />
+            <source src="LogoVid.mp4" type="video/mp4" />
+            <source src="/LogoVid.webm" type="video/webm" />
+            <source src="/LogoVid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       ) : (
         <Canvas
-          frameloop="demand"
+          frameloop="always"
           shadows
           dpr={[1, 2]}
-          camera={{ position: [20, 3, 5], fov: 25 }}
-          gl={{ preserveDrawingBuffer: true }}
+          camera={{ position: [0, 0, 6.5], fov: 45 }}
+          gl={{ preserveDrawingBuffer: true, alpha: true }}
         >
           <Suspense fallback={<CanvasLoader />}>
             <OrbitControls
               enablePan={false}
               enableZoom={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
+              enableDamping={true}
+              dampingFactor={0.05}
             />
-            <Computers isMobile={isMobile} />
+            <LogoCube />
           </Suspense>
           <Preload all />
         </Canvas>
       )}
-    </>
+    </div>
   );
 };
 
-export default ComputersCanvas;
+export default LogoCanvas;

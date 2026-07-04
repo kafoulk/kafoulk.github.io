@@ -13,6 +13,37 @@
   color-scheme: dark;
 }
 
+#glow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Crucial: allows users to still click buttons underneath the glow */
+  z-index: 1; /* Keep it behind text/buttons, but above background colors */
+  
+  /* The linear/radial gradient glow effect */
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(99, 102, 241, 0.15), /* Your primary glow color (e.g., Indigo with low opacity) */
+    transparent 80%
+  );
+  
+  /* Soft transition for mobile touches so it doesn't instantly snap aggressively */
+  transition: background 0.3s ease;
+}
+
+/* Optional: If you want the glow to be invisible on mobile until they actually touch */
+@media (max-width: 768px) {
+  #glow-canvas {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  #glow-canvas.active {
+    opacity: 1;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
