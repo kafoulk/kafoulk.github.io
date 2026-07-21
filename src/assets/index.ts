@@ -29,6 +29,8 @@ import cometLab from "./company/cropped-comet_logo_300.png";
 import jagsparkScreen from "./JagsparkScreen.png";
 import apex from "./apex.png";
 import zenithVR from "./ZenithVR_Screenshot.png";
+import williamAudetSq from "./william-audet-sq.jpg";
+import zebWood from "./zebWood.png";
 
 export {
   logo,
@@ -59,4 +61,6 @@ export {
   jagsparkScreen,
   apex,
   zenithVR,
+  williamAudetSq,
+  zebWood,
 };

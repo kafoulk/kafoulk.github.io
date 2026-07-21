@@ -3,8 +3,8 @@ import type {
   TService,
   TTechnology,
   TExperience,
-  TTestimonial,
   TProject,
+  TTestimonial,
 } from "../types";
 
 import {
@@ -32,6 +32,8 @@ import {
   jagsparkScreen,
   zenithVR,
   cometLab,
+  williamAudetSq,
+  zebWood,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -201,7 +203,7 @@ const testimonials: TTestimonial[] = [
     name: "William Audet",
     designation: "Founder",
     company: "Audet & Partners, LLP",
-    image: "src/assets/william-audet-sq.jpg",
+    image: williamAudetSq,
   },
   /*{
     testimonial:
@@ -217,7 +219,7 @@ const testimonials: TTestimonial[] = [
     name: "Zeb Wood",
     designation: "CTO",
     company: "OpenMind XR",
-    image: "src/assets/zebWood.png",
+    image: zebWood,
   },
 ];
 
